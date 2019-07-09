@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/ll_dialog_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="24.0dip"
+    android:paddingTop="24.0dip"
+    android:paddingRight="24.0dip">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名称："
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/btn_normal_size" />
+
+        <TextView
+           android:id="@+id/tv_dialog_app_manage_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/normal_text_color"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/btn_normal_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="包名："
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/btn_normal_size" />
+
+        <TextView
+           android:id="@+id/tv_dialog_app_manage_package"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/normal_text_color"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/btn_normal_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本："
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/btn_normal_size" />
+
+        <TextView
+           android:id="@+id/tv_dialog_app_manage_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/normal_text_color"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/btn_normal_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MD5："
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/btn_normal_size" />
+
+        <TextView
+           android:id="@+id/tv_dialog_app_manage_md5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/normal_text_color"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/btn_normal_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="位置："
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/btn_normal_size" />
+
+        <TextView
+           android:id="@+id/tv_dialog_app_manage_file_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/normal_text_color"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/btn_normal_size" />
+    </LinearLayout>
+</LinearLayout>

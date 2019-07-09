@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="4.0dip"
+    android:paddingRight="4.0dip"
+    android:paddingBottom="50.0dip">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4.0dip"
+        android:foreground="?android:selectableItemBackground">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/card_inner_padding">
+
+            <TextView
+               android:id="@+id/tv_repair_local_app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_android"
+                android:drawablePadding="5.0dip"
+                android:paddingLeft="@dimen/card_inner_padding"
+                android:text="已安装应用"
+                android:textColor="@color/second_text_color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recycler_repair_local_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

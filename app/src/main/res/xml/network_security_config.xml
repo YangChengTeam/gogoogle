@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">go.197854.com</domain>
+        <domain includeSubdomains="true">installer.goplaycn.com</domain>
+        <domain includeSubdomains="true">cdn.goplayervideo.com</domain>
+        <domain includeSubdomains="true">192.168.0.130</domain>
+    </domain-config>
+</network-security-config>

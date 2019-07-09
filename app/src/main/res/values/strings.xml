@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">谷歌一键安装器</string>
+
+    <string name="label_feedback">常见问题</string>
+    <string name="app_version">V1.0.0</string>
+    <string name="about_app">关于</string>
+    <string name="app_backup">回收站</string>
+    <string name="label_click_over"></string>
+    <string name="google_framework">Google 服务框架</string>
+    <string name="google_contact_sync">Google 联系人同步</string>
+    <string name="google_login_service">Google 账户管理程序</string>
+    <string name="google_play">Google Play 商店</string>
+    <string name="google_play_service">Google Play 服务</string>
+    <string name="google_recommend">谷歌全收录</string>
+    <string name="is_newest">已经是最新版了</string>
+    <string name="keep_queued_download">Keep</string>
+    <string name="label_about_offical_website">官网：</string>
+    <string name="label_about_qq">客服QQ群: 902598257</string>
+    <string name="label_all_install">谷歌套件已安装</string>
+    <string name="label_app_manager">应用管理</string>
+    <string name="label_backup_app_copy_fail">备份失败，请授予存储权限后重试</string>
+    <string name="label_backup_ing">正在备份，请稍候…</string>
+    <string name="label_brand_root">已ROOT</string>
+    <string name="label_brand_root_no">未ROOT</string>
+    <string name="label_dl_fail">下载失败</string>
+    <string name="label_download_ing">下载中，请稍候…</string>
+    <string name="label_hosts_desc">"请你获得足够的解锁次数后，再进行相关操作。
+如何获得解锁次数？请点击我要解锁"</string>
+    <string name="label_hosts_dl_obtain_subtitle">"①下载安装应用
+
+②在安装器中打开应用使用10秒
+
+③获得解锁次数"</string>
+    <string name="label_hosts_dl_obtain_title">下载以下应用，获得更多解锁次数</string>
+    <string name="label_hosts_dns_connect">一键开启</string>
+    <string name="label_hosts_dns_disconnect">断开连接</string>
+    <string name="label_hosts_vpn_help_message">科学上网是指用技术方法连接上世界的网络。通过科学上网，可以浏览到全世界更多的网站、APP（包括谷歌），了解更多的信息。</string>
+    <string name="label_install_ing">正在安装…</string>
+    <string name="label_local_app_uninstall_sys_title">"卸载系统应用需要ROOT权限，点击获取
+系统应用卸载后将被备份于回收站，若出现问题请从回收站中恢复"</string>
+    <string name="label_local_normal_app">已安装应用</string>
+    <string name="label_local_sys_app">系统应用</string>
+    <string name="label_more_app_title">为你精心挑选的应用</string>
+    <string name="label_net_wrong">网络连接有问题,点击重试</string>
+    <string name="label_network_wrong">网络连接有问题,检查一下网络看看~</string>
+    <string name="label_no_root">你的手机没有ROOT</string>
+    <string name="label_open_market_fail">打开失败，安装官方应用商店后重试</string>
+    <string name="label_repairing">努力安装中…</string>
+    <string name="label_reset_ing">正在恢复，请稍候…</string>
+    <string name="label_self_update_confirm">立即更新</string>
+    <string name="label_share_can_use">恭喜,您的谷歌可以使用啦!</string>
+    <string name="label_uninstall_ing">正在卸载，请稍候…</string>
+    <string name="label_uninstall_sys_update_note">替换为出厂版本后，完全删除需再次进行卸载</string>
+    <string name="label_wait_repair_info">检测到您的谷歌套件不完整，立即点击“一键安装”来搞定！</string>
+    <string name="label_wait_repair_title">谷歌套件不完整</string>
+    <string name="loading">加载中…</string>
+    <string name="manage_about_summary">翻车工作室出品</string>
+    <string name="manage_about_title">关于</string>
+    <string name="manage_setting_summary">下载管理</string>
+    <string name="manage_setting_title">设置</string>
+    <string name="manage_share_summary">推荐给更多的谷歌爱好者</string>
+    <string name="manage_share_title">分享</string>
+    <string name="manage_uninstall_summary">卸载之后将无法使用谷歌服务，请谨慎使用</string>
+    <string name="manage_uninstall_title">卸载谷歌套件</string>
+    <string name="manage_update_summary">当前版本: 1.2.0</string>
+    <string name="manage_update_title">检查更新</string>
+    <string name="manage_upload_summary">请写清楚详细问题和机型</string>
+    <string name="manage_upload_title">反馈</string>
+    <string name="missing_title">&lt;Unknown></string>
+    <string name="no_downloads">No downloads.</string>
+    <string name="notification_download_complete">下载完成，点击打开</string>
+    <string name="notification_download_failed">下载失败</string>
+    <string name="notification_filename_extras">" and %d more"</string>
+    <string name="notification_filename_separator">", "</string>
+    <string name="notification_need_wifi_for_size">Download size requires Wi-Fi</string>
+    <string name="out_wall_recommend">科学上网</string>
+    <string name="repaired_operate_onekey">一键安装</string>
+    <string name="repaired_operate_repair_again">重新安装</string>
+    <string name="repaired_operate_repair_rate">去好评</string>
+    <string name="setting_root_summary">Root安装谷歌套件更加稳定，推荐Root用户使用</string>
+    <string name="setting_root_title">Root授权</string>
+    <string name="setting_system_summary">system目录可读写才可以进行ROOT安装</string>
+    <string name="setting_system_title">系统目录是否可读写</string>
+    <string name="success_copy">内容已成功复制到剪切板</string>
+    <string name="success_install_suggest_reboot">安装成功，重启生效，建议重启</string>
+    <string name="success_obtain_root">获取ROOT权限成功</string>
+    <string name="success_repair_again_title">安装成功</string>
+    <string name="success_repair_default">谷歌套件已安装</string>
+    <string name="success_repair_info">谷歌套件安装成功</string>
+    <string name="success_repair_info_reboot">谷歌套件已安装成功，重启之后即可正常使用谷歌服务</string>
+    <string name="success_repair_share">推荐给更多谷粉</string>
+    <string name="success_repair_title">安装成功</string>
+    <string name="success_reset">恢复成功，重启后生效，建议重启</string>
+    <string name="success_uninstall_common">卸载完成，建议重启</string>
+    <string name="tools_recommend">推荐应用列表</string>
+    <string name="um_share_more">更多</string>
+    <string name="repaired_operate_reboot">立即重启</string>
+    <string name="app_description">
+        谷歌一键安装器由翻车工作室出品，致力于帮您一键安装谷歌套件。目前已经支持大部分主流机型的Root安装，同时我们也会持续的更新和适配，让更多的人可以方便的使用服务。如果有什么问题可以联系我们的客服QQ群，将您的问题反馈给我们！
+    </string>
+    <string name="setting">设置</string>
+    <string name="setting_net_summary">会消耗您的流量，推荐关闭</string>
+    <string name="setting_net_title">移动网络下载</string>
+    <string name="share_url_copy">分享链接已复制,正在前往微信...</string>
+</resources>

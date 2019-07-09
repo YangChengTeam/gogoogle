@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/img_splash_logo" />
+
+    <ImageView
+        android:id="@+id/splash_back"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/app_logo"
+        android:paddingBottom="25.0dip"
+        android:scaleType="center"
+        android:src="@drawable/img_splash_text" />
+
+    <FrameLayout
+        android:id="@+id/splash_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/app_logo" />
+
+    <ImageView
+        android:id="@+id/splash_ad"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/app_logo"
+        android:paddingBottom="25.0dip"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/skip_view"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25.0dip"
+        android:layout_marginRight="16.0dip"
+        android:background="@drawable/shape_splash_jump"
+        android:gravity="center"
+        android:padding="5.0dip"
+        android:text="@string/label_click_over"
+        android:textColor="@android:color/white"
+        android:textSize="12.0sp" />
+
+    <TextView
+        android:id="@+id/skip_view_top"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="25.0dip"
+        android:layout_marginRight="16.0dip"
+        android:background="@color/white"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/splash_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/app_logo"
+        android:paddingBottom="25.0dip" />
+</RelativeLayout>

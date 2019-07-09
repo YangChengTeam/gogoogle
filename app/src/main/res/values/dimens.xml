@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_normal_size">14.0sp</dimen>
+    <dimen name="fab_margin">16.0dp</dimen>
+    <dimen name="google_icon_size">35.0dp</dimen>
+    <dimen name="google_progress_size">25.0dp</dimen>
+    <dimen name="text_second_size">12.0sp</dimen>
+    <dimen name="text_title_size">16.0sp</dimen>
+    <dimen name="google_content_height">50.0dp</dimen>
+
+    <dimen name="card_inner_padding">16.0dip</dimen>
+    <dimen name="card_margin">8.0dip</dimen>
+    <dimen name="cardview_compat_inset_shadow">1.0dip</dimen>
+    <dimen name="cardview_default_elevation">2.0dip</dimen>
+    <dimen name="cardview_default_radius">2.0dip</dimen>
+    <dimen name="bottom_padding">112.0dip</dimen>
+    <dimen name="tab_height">45.0dip</dimen>
+</resources>

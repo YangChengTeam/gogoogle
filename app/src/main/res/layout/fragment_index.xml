@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="275.0dip"
+        android:layout_above="@id/nest_check_view"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_base"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin"
+                app:logo="@drawable/ic_toolbar_img"
+                app:popupTheme="@style/MyOptionMenuStyle"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <TextView
+                    android:id="@+id/tv_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="17.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_toolbar_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?android:actionBarSize"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10.0dip"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/label_feedback"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/btn_normal_size" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:id="@+id/rl_check_top_main"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/toolbar_base"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_above="@id/ll_check_info"
+                    android:minHeight="180.0dip">
+
+                    <ImageView
+                        android:id="@+id/iv_check_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tv_check_brand_null"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="28.0sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_check_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/iv_check_wave"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_check_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_check_brand"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="3.0dip"
+                        android:text="机型:OnePlus A3000"
+                        android:textColor="@color/phone_info"
+                        android:textSize="12.0sp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_check_version"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/phone_info"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" | "
+                            android:textColor="@color/white" />
+
+                        <TextView
+                            android:id="@+id/tv_check_root"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/phone_info"
+                            android:textSize="12.0sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_check_wave"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tv_main_check_status"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_wave" />
+
+                <TextView
+                    android:id="@+id/tv_main_check_status"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:paddingTop="5.0dip"
+                    android:paddingRight="16.0dip"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="12.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_main_go_tips"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingTop="5.0dip"
+                    android:text="点击Go一键安装谷歌套件 ☞"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="12.0dip" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:layout_marginBottom="5.0dip"
+                    app:backgroundTint="#ff00c857"
+                    app:fabSize="normal"
+                    app:srcCompat="@drawable/ic_fab_go"
+                    app:theme="@style/MyFABStyle" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nest_check_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="56.0dip"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/rl_check_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_check_google_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingTop="5.0dip"
+                android:text="必备套件"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/text_second_size" />
+
+            <LinearLayout
+                android:id="@+id/ll_check_google_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_check_google_title"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingRight="9.0dip"
+                android:paddingBottom="10.0dip">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/google_content_height"
+                    android:paddingLeft="16.0dip">
+
+                    <ImageView
+                        android:id="@+id/iv_check_fk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_google_fk" />
+
+                    <TextView
+                        style="@style/GoogleApkStatus"
+                        android:layout_toRightOf="@id/iv_check_fk"
+                        android:text="@string/google_framework" />
+
+                    <ImageView
+                        android:id="@+id/image_main_frame_status"
+                        style="@style/GoogleApkStatusIcon"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/pc_main_frame"
+                        style="@style/GoogleApkStatusProgress"
+                        android:theme="@style/ThemeProgressbar"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_main_status_frame"
+                        style="@style/GoogleApkStatusText"
+                        android:visibility="gone" />
+
+                    <com.yc.google.view.widget.CheckStatusButton
+                        android:id="@+id/checkStatusButton_checkFragment_gsf"
+                        android:layout_width="60.0dip"
+                        android:layout_height="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_check_main_gsf_login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/google_content_height"
+                    android:paddingLeft="16.0dip">
+
+                    <ImageView
+                        android:id="@+id/iv_check_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_google_login" />
+
+                    <TextView
+                        style="@style/GoogleApkStatus"
+                        android:layout_toRightOf="@id/iv_check_login"
+                        android:text="@string/google_login_service" />
+
+                    <ImageView
+                        android:id="@+id/image_main_login_status"
+                        style="@style/GoogleApkStatusIcon"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/pc_main_login"
+                        style="@style/GoogleApkStatusProgress"
+                        android:theme="@style/ThemeProgressbar"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_main_status_login"
+                        style="@style/GoogleApkStatusText"
+                        android:visibility="gone" />
+
+                    <com.yc.google.view.widget.CheckStatusButton
+                        android:id="@+id/checkStatusButton_checkFragment_gsfLogin"
+                        android:layout_width="60.0dip"
+                        android:layout_height="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_main_play_service"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/google_content_height"
+                    android:paddingLeft="16.0dip">
+
+                    <ImageView
+                        android:id="@+id/iv_check_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_google_service" />
+
+                    <TextView
+                        style="@style/GoogleApkStatus"
+                        android:layout_toRightOf="@id/iv_check_service"
+                        android:text="@string/google_play_service" />
+
+                    <ImageView
+                        android:id="@+id/image_main_play_service_status"
+                        style="@style/GoogleApkStatusIcon"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/pc_main_play_service"
+                        style="@style/GoogleApkStatusProgress"
+                        android:theme="@style/ThemeProgressbar"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_main_status_play_service"
+                        style="@style/GoogleApkStatusText"
+                        android:visibility="gone" />
+
+                    <com.yc.google.view.widget.CheckStatusButton
+                        android:id="@+id/checkStatusButton_checkFragment_gms"
+                        android:layout_width="60.0dip"
+                        android:layout_height="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/google_content_height"
+                    android:paddingLeft="16.0dip">
+
+                    <ImageView
+                        android:id="@+id/iv_check_store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_google_store" />
+
+                    <TextView
+                        style="@style/GoogleApkStatus"
+                        android:layout_toRightOf="@id/iv_check_store"
+                        android:text="@string/google_play" />
+
+                    <ImageView
+                        android:id="@+id/image_main_play_apk_status"
+                        style="@style/GoogleApkStatusIcon"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/pc_main_play_apk"
+                        style="@style/GoogleApkStatusProgress"
+                        android:theme="@style/ThemeProgressbar"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_main_status_play_apk"
+                        style="@style/GoogleApkStatusText"
+                        android:visibility="gone" />
+
+                    <com.yc.google.view.widget.CheckStatusButton
+                        android:id="@+id/checkStatusButton_checkFragment_market"
+                        android:layout_width="60.0dip"
+                        android:layout_height="24.0dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_check_ad_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_check_google_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="8.0dip"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_check_ad_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="12.0dip"
+                    android:text="可选组件"
+                    android:textColor="@color/normal_text_color"
+                    android:textSize="@dimen/text_second_size" />
+
+                <LinearLayout
+                    android:id="@+id/ll_check_ad1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8.0dip">
+
+                    <ImageView
+                        android:id="@+id/iv_check_ad_icon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_ad_icon" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical"
+                        android:paddingLeft="12.0dip"
+                        android:paddingBottom="8.0dip">
+
+                        <TextView
+                            android:id="@+id/tv_check_ad_name1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/text_title_size" />
+
+                        <TextView
+                            android:id="@+id/tv_check_ad_subtitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="3.0dip"
+                            android:textColor="@color/second_text_color"
+                            android:textSize="@dimen/text_second_size" />
+                    </LinearLayout>
+
+                    <com.yc.google.view.widget.RepairAdCheckStatusButton
+                        android:id="@+id/checkbox_check_ad1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-6.0dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_check_ad2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8.0dip">
+
+                    <ImageView
+                        android:id="@+id/iv_check_ad_icon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_ad_icon" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical"
+                        android:paddingLeft="12.0dip"
+                        android:paddingBottom="8.0dip">
+
+                        <TextView
+                            android:id="@+id/tv_check_ad_name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/normal_text_color"
+                            android:textSize="@dimen/text_title_size" />
+
+                        <TextView
+                            android:id="@+id/tv_check_ad_subtitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="3.0dip"
+                            android:textColor="@color/second_text_color"
+                            android:textSize="@dimen/text_second_size" />
+                    </LinearLayout>
+
+                    <com.yc.google.view.widget.RepairAdCheckStatusButton
+                        android:id="@+id/checkbox_check_ad2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-6.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

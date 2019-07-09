@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#1c85fc</color>
+    <color name="colorPrimary">#328ade</color>
+    <color name="colorPrimaryDark">#4567be</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="text_second_do">#61000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="phone_info">#99ffffff</color>
+    <color name="second_text_color">#717a96</color>
+    <color name="bg_grey">#f1f1f1</color>
+    <color name="normal_text_color">#1e2e5e</color>
+    <color name="window_background">#f4f7fc</color>
+
+    <color name="listDivider">#dedede</color>
+
+</resources>

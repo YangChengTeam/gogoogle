@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/checkStatusButton_image"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check_circle_green_24dp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/checkStatusButton_progress"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/progressbar_drawable"
+        android:theme="@style/ThemeProgressbar" />
+
+    <TextView
+        android:id="@+id/checkStatusButton_text"
+        android:layout_width="60.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/second_text_color"
+        android:textSize="12.0dip"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,119 @@
+<resources>
+
+    <style name="OverflowMenu" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base" />
+
+    <style name="AppTheme.PopupOverlay" parent="@style/ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.SplashActivity" parent="@style/AppTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppThemeNoTranslucent" parent="@style/AppTheme">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="MyOptionMenuStyle" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyFABStyle" parent="@style/Widget.Design.FloatingActionButton">
+        <item name="colorAccent">@color/bg_grey</item>
+    </style>
+
+    <style name="GoogleApkStatus">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/normal_text_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">12.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="GoogleApkStatusIcon">
+        <item name="android:padding">5.0dip</item>
+        <item name="android:layout_width">@dimen/google_icon_size</item>
+        <item name="android:layout_height">@dimen/google_icon_size</item>
+        <item name="android:layout_marginRight">8.0dip</item>
+        <item name="android:src">@drawable/ic_check_circle_green_24dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="GoogleApkStatusProgress" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_width">@dimen/google_progress_size</item>
+        <item name="android:layout_height">@dimen/google_progress_size</item>
+        <item name="android:layout_marginRight">8.0dip</item>
+        <item name="android:indeterminateDrawable">@drawable/progressbar_drawable</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="GoogleApkStatusText">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#ffaaaaaa</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">60.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="ThemeProgressbar" parent="@style/Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="PopupAnimation" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textStyle">bold</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="SettingCommonItem">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">?android:listPreferredItemPaddingLeft</item>
+        <item name="android:paddingTop">16.0dip</item>
+        <item name="android:paddingRight">?android:listPreferredItemPaddingRight</item>
+        <item name="android:paddingBottom">16.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:minHeight">?android:listPreferredItemHeight</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="AppManagerTabText" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+</resources>
