@@ -135,6 +135,11 @@ public class MyFragment extends BaseFragment {
             }
         }
         unInstallCount = currentUnInstallAppInfos.size();
+        if (unInstallCount == 0) {
+            ToastUtil.toast2(mContext, "没有安装谷歌服务");
+            return;
+        }
+
         CharSequence[] items = new CharSequence[currentUnInstallAppInfos.size()];
         for (int i = 0; i < currentUnInstallAppInfos.size(); i++) {
             items[i] = currentUnInstallAppInfos.get(i);
@@ -177,6 +182,9 @@ public class MyFragment extends BaseFragment {
     }
 
     private void uninstallAppInfo() {
+        if (currentUnInstallAppInfos == null || currentUnInstallAppInfos.size() == 0) {
+            return;
+        }
         String packageName = getPackageByName(currentUnInstallAppInfos.get(currentUnInstallIndex));
         App.getApp().setGoogleSuiteInstallState(GoogleSuiteInstallState.UNINSTALLING);
         CommonUtils.uninstallApp(mContext, packageName);

@@ -1,18 +1,12 @@
 package com.yc.google.view.adpater;
 
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
-import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
-import android.text.method.MovementMethod;
 import android.text.style.ClickableSpan;
-import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.TextView;
 
@@ -26,12 +20,10 @@ import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.jakewharton.rxbinding3.view.RxView;
 import com.kk.utils.LogUtil;
-import com.kk.utils.TaskUtil;
 import com.kk.utils.ToastUtil;
 import com.kk.utils.VUiKit;
 import com.yc.google.App;
 import com.yc.google.R;
-import com.yc.google.constant.Config;
 import com.yc.google.eventbus.GoogleSuiteInstallState;
 import com.yc.google.model.bean.AppInfo;
 import com.yc.google.model.bean.StatusInfo;
@@ -41,14 +33,12 @@ import com.yc.google.utils.CommonUtils;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
-import rx.Scheduler;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
@@ -60,7 +50,7 @@ public class GoogleSuiteStatusAdpater extends BaseMultiItemQuickAdapter<StatusIn
     private RecyclerView recyclerView;
 
     private int page = 1;
-    private int pagecount = 8;
+    private int pagecount = 10;
     private List<AppInfo> currentInfos = new ArrayList();
 
     public GoogleSuiteStatusAdpater(List<StatusInfo> data) {
@@ -147,14 +137,9 @@ public class GoogleSuiteStatusAdpater extends BaseMultiItemQuickAdapter<StatusIn
                 recyclerView.setAdapter(appListAdpater);
                 recyclerView.setItemAnimator(new DefaultItemAnimator());
                 recyclerView.addItemDecoration(new DividerItemDecoration(mContext, DividerItemDecoration.VERTICAL));
-                appListAdpater.setOnLoadMoreListener(new RequestLoadMoreListener() {
-                    @Override
-                    public void onLoadMoreRequested() {
-                        showMore();
-                    }
-                }, recyclerView);
 
-                // 双层View嵌套
+                VUiKit.postDelayed(1000, this::showMore);
+
                 ((View) helper.getView(R.id.tv_repair_local_app_title).getParent().getParent()).setVisibility(View.VISIBLE);
                 break;
         }
@@ -169,7 +154,7 @@ public class GoogleSuiteStatusAdpater extends BaseMultiItemQuickAdapter<StatusIn
         App.getApp().setUninstallAppInfo(null);
     }
 
-    private void showMore(){
+    private void showMore() {
         Observable.just("").map(new Func1<String, Boolean>() {
             @Override
             public Boolean call(String s) {
@@ -178,20 +163,18 @@ public class GoogleSuiteStatusAdpater extends BaseMultiItemQuickAdapter<StatusIn
         }).subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Subscriber<Boolean>() {
             @Override
             public void onCompleted() {
-                appListAdpater.notifyDataSetChanged();
+
             }
 
             @Override
             public void onError(Throwable e) {
-                appListAdpater.loadMoreFail();
             }
 
             @Override
             public void onNext(Boolean aBoolean) {
                 if (aBoolean) {
-                    appListAdpater.loadMoreComplete();
-                } else {
-                    appListAdpater.loadMoreEnd();
+                    VUiKit.postDelayed(800, GoogleSuiteStatusAdpater.this::showMore);
+                    appListAdpater.notifyDataSetChanged();
                 }
             }
         });
@@ -209,7 +192,7 @@ public class GoogleSuiteStatusAdpater extends BaseMultiItemQuickAdapter<StatusIn
         }).subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread()).subscribe(new Subscriber<List<AppInfo>>() {
             @Override
             public void onCompleted() {
-                showMore();
+
             }
 
             @Override

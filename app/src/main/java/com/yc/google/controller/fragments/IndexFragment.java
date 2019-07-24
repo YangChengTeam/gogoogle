@@ -134,6 +134,8 @@ public class IndexFragment extends BaseFragment {
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(GoogleSuiteInstallState googleSuiteInstallState) {
+        if(!isAdded()) return; //fragment detach
+
         if (googleSuiteInstallState == null) return;
 
         if (googleSuiteInstallState == GoogleSuiteInstallState.GO) {
@@ -179,12 +181,16 @@ public class IndexFragment extends BaseFragment {
 
             @Override
             public void onError(Throwable e) {
+                if(!isAdded()) return; //fragment detach
+
                 checkGoogleSuitStatus(true);
                 ToastUtil.toast2(mContext, getString(R.string.label_network_wrong));
             }
 
             @Override
             public void onNext(ResultInfo<List<AppInfo>> listResultInfo) {
+                if(!isAdded()) return; //fragment detach
+
                 if (listResultInfo != null && listResultInfo.getData() != null) {
                     appInfos = listResultInfo.getData();
                     installGoogleSuite();
@@ -329,6 +335,8 @@ public class IndexFragment extends BaseFragment {
 
             @Override
             public void fetchProgress(@NonNull DownloadTask task, int blockIndex, long increaseBytes) {
+                if(!isAdded()) return; //fragment detach
+
                 BreakpointInfo info = OkDownload.with().breakpointStore().get(task.getId());
                 if (info != null) {
                     currentCheckStatusButton.setTextStatus((int) (info.getTotalOffset() / (float) info.getTotalLength() * 100) + "%");
@@ -342,6 +350,8 @@ public class IndexFragment extends BaseFragment {
 
             @Override
             public void taskEnd(@NonNull DownloadTask task, @NonNull EndCause cause, @Nullable Exception realCause) {
+                if(!isAdded()) return; //fragment detach
+
                 installGoogleSuite();
             }
         });
@@ -414,6 +424,5 @@ public class IndexFragment extends BaseFragment {
         super.onStop();
         EventBus.getDefault().unregister(this);
     }
-
 
 }

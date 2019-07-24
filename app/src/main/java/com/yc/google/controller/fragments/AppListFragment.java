@@ -64,6 +64,8 @@ public class AppListFragment extends BaseFragment {
             mStatusInfo = new StatusInfo();
         }
         mStatusInfo.setItemType(0);
+        mStatusInfo.setTitle("检测中");
+        mStatusInfo.setDesp("请稍后...");
         StatusInfo statusInfo = new StatusInfo();
         statusInfo.setItemType(1);
         statusInfos.add(mStatusInfo);

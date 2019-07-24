@@ -16,13 +16,8 @@ import com.jakewharton.rxbinding3.view.RxView;
 import com.kk.utils.ScreenUtil;
 import com.yc.google.App;
 import com.yc.google.R;
-import com.yc.google.eventbus.GoogleSuiteInstallState;
 import com.yc.google.model.bean.AppInfo;
 import com.yc.google.utils.CommonUtils;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.HashMap;

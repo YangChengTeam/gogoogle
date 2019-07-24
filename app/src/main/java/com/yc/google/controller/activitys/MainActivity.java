@@ -78,7 +78,6 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        preloadAppList();
         mNavController.setSelect(0);
         select(0, -1);
 
@@ -88,6 +87,7 @@ public class MainActivity extends BaseActivity {
     private void preloadAppList(){
         FragmentTransaction trx = getSupportFragmentManager().beginTransaction();
         trx.add(R.id.fl_main_content, mFragmentList.get(1)).commit();
+        trx.hide(mFragmentList.get(1));
     }
 
     private void select(int index, int old) {
